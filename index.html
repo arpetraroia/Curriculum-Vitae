@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angelo Rayfed Petraroia Cano - CV</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1e3a8a', // Deep Blue
+                        secondary: '#475569', // Slate
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* Print optimizations to ensure it acts like a perfect A4 Doc */
+        @media print {
+            body {
+                background-color: white !important;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+            .no-print {
+                display: none !important;
+            }
+            .page-container {
+                box-shadow: none !important;
+                margin: 0 !important;
+                padding: 0 !important;
+                max-width: 100% !important;
+            }
+            .avoid-break {
+                break-inside: avoid;
+            }
+            @page {
+                margin: 1.5cm;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800 min-h-screen py-8 px-4 sm:px-8">
+
+    <!-- Action Bar (Hidden on print) -->
+    <div class="max-w-5xl mx-auto mb-6 flex justify-end no-print">
+        <button onclick="window.print()" class="bg-primary text-white px-5 py-2.5 rounded-lg shadow-sm hover:bg-blue-900 transition-colors flex items-center gap-2 font-medium">
+            <i data-lucide="printer" class="w-5 h-5"></i>
+            Print / Save as PDF
+        </button>
+    </div>
+
+    <!-- Main CV Document -->
+    <main class="page-container max-w-5xl mx-auto bg-white p-8 md:p-14 lg:p-16 shadow-xl rounded-sm border border-gray-200">
+        
+        <!-- Header -->
+        <header class="border-b-2 border-primary pb-6 mb-8 text-center md:text-left">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-900 tracking-tight mb-4">Angelo Rayfed Petraroia Cano</h1>
+            
+            <div class="flex flex-wrap justify-center md:justify-start gap-4 md:gap-6 text-sm md:text-base text-secondary font-medium">
+                <div class="flex items-center gap-1.5 hover:text-primary transition-colors">
+                    <i data-lucide="map-pin" class="w-4 h-4"></i>
+                    London, England, UK
+                </div>
+                <a href="tel:+447864015416" class="flex items-center gap-1.5 hover:text-primary transition-colors">
+                    <i data-lucide="phone" class="w-4 h-4"></i>
+                    +44 7864 015 416
+                </a>
+                <a href="mailto:arpetraroia@gmail.com" class="flex items-center gap-1.5 hover:text-primary transition-colors">
+                    <i data-lucide="mail" class="w-4 h-4"></i>
+                    arpetraroia@gmail.com
+                </a>
+                <a href="https://www.linkedin.com/in/angelorayfedpetraroia" target="_blank" class="flex items-center gap-1.5 hover:text-primary transition-colors">
+                    <i data-lucide="linkedin" class="w-4 h-4"></i>
+                    LinkedIn Profile
+                </a>
+            </div>
+        </header>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+            
+            <!-- Left/Main Column: Summary & Experience -->
+            <div class="lg:col-span-2 space-y-8">
+                
+                <!-- Summary Section -->
+                <section>
+                    <h2 class="text-2xl font-bold text-primary flex items-center gap-2 mb-3">
+                        <i data-lucide="user" class="w-6 h-6"></i> Summary
+                    </h2>
+                    <p class="text-gray-700 leading-relaxed text-justify">
+                        Data-driven risk and policy analyst with extensive experience supporting large-scale platforms and teams through data-informed decision-making, cross-functional collaboration, and stakeholder alignment. Passionate about data analytics, compliance-driven work, and optimising product effectiveness to protect online communities.
+                    </p>
+                </section>
+
+                <!-- Experience Section -->
+                <section>
+                    <h2 class="text-2xl font-bold text-primary flex items-center gap-2 mb-6">
+                        <i data-lucide="briefcase" class="w-6 h-6"></i> Professional Experience
+                    </h2>
+
+                    <!-- Morgan McKinley -->
+                    <div class="mb-8 avoid-break">
+                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline mb-2">
+                            <h3 class="text-xl font-bold text-gray-900">Trust & Safety Policy Specialist <span class="text-base font-normal text-secondary">(Contractor @ Google)</span></h3>
+                            <span class="text-sm font-semibold text-primary whitespace-nowrap">July 2025 – Present</span>
+                        </div>
+                        <p class="text-secondary font-medium mb-3 flex items-center gap-1">
+                            <i data-lucide="building-2" class="w-4 h-4"></i> Morgan McKinley | London, UK
+                        </p>
+                        <ul class="list-disc list-outside ml-5 space-y-2 text-gray-700">
+                            <li>Manage high-priority legal escalations and sensitive content removals, safeguarding operational integrity and ensuring strict policy compliance for Google Legal.</li>
+                            <li>Author and optimise robust legal takedown workflows and policy enforcement procedures.</li>
+                            <li>Drive cross-functional alignment across Policy, Legal, and Operations teams to guarantee consistent, accurate contextual judgment in platform risk mitigation.</li>
+                        </ul>
+                    </div>
+
+                    <!-- TikTok -->
+                    <div class="mb-8">
+                        <div class="flex items-center gap-2 mb-4 border-b border-gray-100 pb-2">
+                            <h3 class="text-xl font-bold text-gray-900">TikTok</h3>
+                            <span class="text-sm font-medium text-gray-500">London, UK</span>
+                        </div>
+                        
+                        <!-- TikTok Role 1 -->
+                        <div class="mb-5 avoid-break pl-4 border-l-2 border-gray-200">
+                            <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline mb-2">
+                                <h4 class="text-lg font-semibold text-gray-800">Trust & Safety Team Lead</h4>
+                                <span class="text-sm font-semibold text-primary whitespace-nowrap">March 2022 – February 2025</span>
+                            </div>
+                            <ul class="list-disc list-outside ml-5 space-y-2 text-gray-700 text-sm md:text-base">
+                                <li>Recalled 5 major harmful platform trends via targeted policy enforcement by directing a 25-moderator Trend Discovery Project to proactively mitigate emerging risks.</li>
+                                <li>Reduced EMEA reporting time by 20%+ by architecting centralised data visualisation dashboards, establishing the official leadership source of truth.</li>
+                                <li>Enhanced platform AI model workflows and user safety by spearheading the EMEA Task Force for human-led trend moderation and resource allocation.</li>
+                                <li>Standardised regional policy enforcement by designing and implementing comprehensive cross-market training programmes.</li>
+                            </ul>
+                        </div>
+
+                        <!-- TikTok Role 2 -->
+                        <div class="mb-5 avoid-break pl-4 border-l-2 border-gray-200">
+                            <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline mb-2">
+                                <h4 class="text-lg font-semibold text-gray-800">Trust & Safety Quality Analyst</h4>
+                                <span class="text-sm font-semibold text-primary whitespace-nowrap">March 2021 – April 2022</span>
+                            </div>
+                            <ul class="list-disc list-outside ml-5 space-y-2 text-gray-700 text-sm md:text-base">
+                                <li>Resolved complex user disputes as Final Arbitrator in the Online Appeal process, rigorously enforcing community ecological safety.</li>
+                                <li>Unblocked moderation queues through data-driven Root Cause Analysis (RCA), delivering actionable quality inspection reports to stakeholders.</li>
+                                <li>Optimised QA standards and tooling by collaborating cross-functionally to align global policy guideline implementations.</li>
+                            </ul>
+                        </div>
+
+                        <!-- TikTok Role 3 -->
+                        <div class="avoid-break pl-4 border-l-2 border-gray-200">
+                            <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline mb-2">
+                                <h4 class="text-lg font-semibold text-gray-800">Community Content Management Specialist</h4>
+                                <span class="text-sm font-semibold text-primary whitespace-nowrap">May 2020 – March 2021</span>
+                            </div>
+                            <ul class="list-disc list-outside ml-5 space-y-2 text-gray-700 text-sm md:text-base">
+                                <li>Safeguarded online communities by strictly enforcing legal compliance and platform safety standards for short-form video content.</li>
+                                <li>Accelerated the removal of policy-violating content through streamlined coordination with supervising departments.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- hi Inc. -->
+                    <div class="mb-8 avoid-break">
+                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline mb-2">
+                            <h3 class="text-lg font-bold text-gray-900">Public Relations Executive - Global Markets</h3>
+                            <span class="text-sm font-semibold text-primary whitespace-nowrap">September 2018 – September 2019</span>
+                        </div>
+                        <p class="text-secondary font-medium mb-3 flex items-center gap-1">
+                            <i data-lucide="building-2" class="w-4 h-4"></i> hi Inc. | London, UK
+                        </p>
+                        <ul class="list-disc list-outside ml-5 space-y-2 text-gray-700 text-sm md:text-base">
+                            <li>Drove seamless B2B and B2C partner integration and supply chain operations for a fast-growing travel tech startup.</li>
+                            <li>Resolved hardware and software issues efficiently utilising CMS and CRM tools.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Sitel -->
+                    <div class="mb-8">
+                        <div class="flex items-center gap-2 mb-4 border-b border-gray-100 pb-2">
+                            <h3 class="text-xl font-bold text-gray-900">Sitel</h3>
+                            <span class="text-sm font-medium text-gray-500">Kingston upon Thames, UK</span>
+                        </div>
+
+                        <!-- Sitel Role 1 -->
+                        <div class="mb-5 avoid-break pl-4 border-l-2 border-gray-200">
+                            <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline mb-2">
+                                <h4 class="text-lg font-semibold text-gray-800">IT Support - FileMaker Inc. <span class="text-sm font-normal text-secondary">(Apple Subsidiary)</span></h4>
+                                <span class="text-sm font-semibold text-primary whitespace-nowrap">May 2018 – October 2018</span>
+                            </div>
+                            <ul class="list-disc list-outside ml-5 space-y-2 text-gray-700 text-sm md:text-base">
+                                <li>Accelerated technical resolution times by collaborating with developers and deeply troubleshooting AWS EC2 and FileMaker Cloud deployments.</li>
+                                <li>Guided future product feature development by simulating customer environments and issues using Dev Tools, HTML, and CSS.</li>
+                            </ul>
+                        </div>
+
+                        <!-- Sitel Role 2 -->
+                        <div class="avoid-break pl-4 border-l-2 border-gray-200">
+                            <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline mb-2">
+                                <h4 class="text-lg font-semibold text-gray-800">Quality Assurance & Multilingual Service Advisor</h4>
+                                <span class="text-sm font-semibold text-primary whitespace-nowrap">September 2017 – May 2018</span>
+                            </div>
+                            <ul class="list-disc list-outside ml-5 space-y-2 text-gray-700 text-sm md:text-base">
+                                <li>Maximised first-contact resolution across EMEA, LATAM, and AMR markets by engineering targeted complaint-handling processes.</li>
+                                <li>Elevated team performance via a fast-tracked promotion to QA, delivering critical coaching, monitoring, and quality control feedback.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Telecom Italia -->
+                    <div class="avoid-break">
+                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline mb-2">
+                            <h3 class="text-lg font-bold text-gray-900">Sales Representative</h3>
+                            <span class="text-sm font-semibold text-primary whitespace-nowrap">June 2013 – September 2015</span>
+                        </div>
+                        <p class="text-secondary font-medium mb-3 flex items-center gap-1">
+                            <i data-lucide="building-2" class="w-4 h-4"></i> Telecom Italia Information Technology | Termoli, Italy
+                        </p>
+                        <ul class="list-disc list-outside ml-5 space-y-2 text-gray-700 text-sm md:text-base">
+                            <li>Ensured 100% strict adherence to financial policies, industry limits, and compliance standards while processing B2C transactions.</li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Right/Sidebar Column: Skills & Education -->
+            <div class="space-y-8 lg:border-l lg:border-gray-200 lg:pl-8">
+                
+                <!-- Education Section -->
+                <section class="avoid-break">
+                    <h2 class="text-2xl font-bold text-primary flex items-center gap-2 mb-4">
+                        <i data-lucide="graduation-cap" class="w-6 h-6"></i> Education
+                    </h2>
+                    <div class="bg-gray-50 rounded-lg p-4 border border-gray-100">
+                        <h3 class="font-bold text-gray-900 text-lg">Data Science & Computing</h3>
+                        <p class="text-primary font-medium mt-1">Birkbeck, University of London</p>
+                        <p class="text-secondary text-sm mt-1 flex items-center gap-1">
+                            <i data-lucide="map-pin" class="w-3 h-3"></i> London, UK
+                        </p>
+                        <p class="text-secondary text-sm mt-1 flex items-center gap-1">
+                            <i data-lucide="calendar" class="w-3 h-3"></i> 2021 – 2024
+                        </p>
+                    </div>
+                </section>
+
+                <!-- Skills Section -->
+                <section>
+                    <h2 class="text-2xl font-bold text-primary flex items-center gap-2 mb-4">
+                        <i data-lucide="cpu" class="w-6 h-6"></i> Skills
+                    </h2>
+                    
+                    <div class="mb-6 avoid-break">
+                        <h3 class="font-semibold text-gray-800 mb-3 uppercase tracking-wider text-sm">Trust & Safety & Policy</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-blue-50 text-blue-700 px-3 py-1 rounded-full text-sm border border-blue-100">Content Moderation</span>
+                            <span class="bg-blue-50 text-blue-700 px-3 py-1 rounded-full text-sm border border-blue-100">Policy Enforcement</span>
+                            <span class="bg-blue-50 text-blue-700 px-3 py-1 rounded-full text-sm border border-blue-100">Legal Takedowns</span>
+                            <span class="bg-blue-50 text-blue-700 px-3 py-1 rounded-full text-sm border border-blue-100">GDPR & Data Protection</span>
+                            <span class="bg-blue-50 text-blue-700 px-3 py-1 rounded-full text-sm border border-blue-100">RTBF</span>
+                            <span class="bg-blue-50 text-blue-700 px-3 py-1 rounded-full text-sm border border-blue-100">IP</span>
+                            <span class="bg-blue-50 text-blue-700 px-3 py-1 rounded-full text-sm border border-blue-100">Escalation Handling</span>
+                            <span class="bg-blue-50 text-blue-700 px-3 py-1 rounded-full text-sm border border-blue-100">QA</span>
+                            <span class="bg-blue-50 text-blue-700 px-3 py-1 rounded-full text-sm border border-blue-100">Root Cause Analysis (RCA)</span>
+                            <span class="bg-blue-50 text-blue-700 px-3 py-1 rounded-full text-sm border border-blue-100">Trend Discovery</span>
+                            <span class="bg-blue-50 text-blue-700 px-3 py-1 rounded-full text-sm border border-blue-100">Risk Mitigation</span>
+                        </div>
+                    </div>
+
+                    <div class="mb-6 avoid-break">
+                        <h3 class="font-semibold text-gray-800 mb-3 uppercase tracking-wider text-sm">Technical</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm border border-gray-200">Python</span>
+                            <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm border border-gray-200">Data Analysis</span>
+                            <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm border border-gray-200">Visualisation Dashboards</span>
+                            <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm border border-gray-200">CMS & CRM</span>
+                            <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm border border-gray-200">Dev Tools</span>
+                            <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm border border-gray-200">HTML/CSS</span>
+                            <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm border border-gray-200">AWS EC2</span>
+                            <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm border border-gray-200">TeamViewer</span>
+                        </div>
+                    </div>
+
+                    <div class="mb-6 avoid-break">
+                        <h3 class="font-semibold text-gray-800 mb-3 uppercase tracking-wider text-sm">Soft Skills</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm border border-gray-200">Cross-functional Collaboration</span>
+                            <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm border border-gray-200">Stakeholder Alignment</span>
+                            <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm border border-gray-200">Problem Solving</span>
+                            <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm border border-gray-200">Diplomatic Communication</span>
+                            <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm border border-gray-200">Organisational Leadership</span>
+                        </div>
+                    </div>
+
+                    <div class="avoid-break">
+                        <h3 class="font-semibold text-gray-800 mb-3 uppercase tracking-wider text-sm">Languages</h3>
+                        <ul class="space-y-2 text-sm text-gray-700">
+                            <li class="flex justify-between items-center bg-gray-50 px-3 py-2 rounded-md">
+                                <span class="font-medium">English</span>
+                                <span class="text-secondary text-xs font-semibold">Native/Bilingual</span>
+                            </li>
+                            <li class="flex justify-between items-center bg-gray-50 px-3 py-2 rounded-md">
+                                <span class="font-medium">Spanish</span>
+                                <span class="text-secondary text-xs font-semibold">Native/Bilingual</span>
+                            </li>
+                            <li class="flex justify-between items-center bg-gray-50 px-3 py-2 rounded-md">
+                                <span class="font-medium">Italian</span>
+                                <span class="text-secondary text-xs font-semibold">Native/Bilingual</span>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+    </script>
+</body>
+</html>
