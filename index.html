@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Angelo Rayfed Petraroia Cano - CV</title>
+    <title>Angelo Rayfed Petraroia Cano - CV & Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <script>
@@ -13,6 +13,7 @@
                     colors: {
                         primary: '#1e3a8a', // Deep Blue
                         secondary: '#475569', // Slate
+                        accent: '#2563eb', // Vibrant Blue for CTA
                     },
                     fontFamily: {
                         sans: ['Inter', 'system-ui', 'sans-serif'],
@@ -26,6 +27,7 @@
         
         body {
             font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
         }
 
         /* Print optimizations to ensure it acts like a perfect A4 Doc */
@@ -43,6 +45,7 @@
                 margin: 0 !important;
                 padding: 0 !important;
                 max-width: 100% !important;
+                border: none !important;
             }
             .avoid-break {
                 break-inside: avoid;
@@ -51,26 +54,52 @@
                 margin: 1.5cm;
             }
         }
+
+        /* Smooth fade transition classes */
+        .fade-enter {
+            animation: fadeIn 0.4s ease-out forwards;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
     </style>
 </head>
 <body class="bg-gray-100 text-gray-800 min-h-screen py-8 px-4 sm:px-8">
 
-    <!-- Action Bar (Hidden on print) -->
-    <div class="max-w-5xl mx-auto mb-6 flex justify-end no-print">
-        <button onclick="window.print()" class="bg-primary text-white px-5 py-2.5 rounded-lg shadow-sm hover:bg-blue-900 transition-colors flex items-center gap-2 font-medium">
-            <i data-lucide="printer" class="w-5 h-5"></i>
-            Print / Save as PDF
+    <!-- Top Navigation Bar (Hidden on print) -->
+    <div class="max-w-5xl mx-auto mb-6 flex flex-col sm:flex-row justify-between items-center gap-4 no-print">
+        
+        <!-- Top Left: Navigation Toggle -->
+        <button id="toggleBtn" onclick="toggleView()" class="bg-white text-primary border border-gray-200 px-5 py-2.5 rounded-lg shadow-sm hover:bg-gray-50 transition-colors flex items-center gap-2 font-bold w-full sm:w-auto justify-center">
+            <i data-lucide="message-square" class="w-5 h-5" id="btnIcon"></i>
+            <span id="btnText">Why Hire Me?</span>
         </button>
+
+        <!-- Top Right: Actions -->
+        <div class="flex flex-col sm:flex-row items-center gap-3 w-full sm:w-auto">
+            <a href="https://doodle.com/bp/angelorayfedpetraroia/lets-get-to-know-angelo" target="_blank" class="bg-accent text-white px-5 py-2.5 rounded-lg shadow-sm hover:bg-blue-700 transition-colors flex items-center gap-2 font-medium w-full sm:w-auto justify-center">
+                <i data-lucide="calendar" class="w-5 h-5"></i>
+                Schedule a call
+            </a>
+            <button onclick="window.print()" class="bg-primary text-white px-5 py-2.5 rounded-lg shadow-sm hover:bg-blue-900 transition-colors flex items-center gap-2 font-medium w-full sm:w-auto justify-center">
+                <i data-lucide="printer" class="w-5 h-5"></i>
+                Print / Save as PDF
+            </button>
+        </div>
     </div>
 
-    <!-- Main CV Document -->
-    <main class="page-container max-w-5xl mx-auto bg-white p-8 md:p-14 lg:p-16 shadow-xl rounded-sm border border-gray-200">
+    <!-- ============================== -->
+    <!--          PAGE 1: CV            -->
+    <!-- ============================== -->
+    <main id="cvView" class="page-container max-w-5xl mx-auto bg-white p-8 md:p-14 lg:p-16 shadow-xl rounded-sm border border-gray-200 fade-enter">
         
         <!-- Header -->
-        <header class="border-b-2 border-primary pb-6 mb-8 text-center md:text-left">
+        <header class="border-b-2 border-primary pb-8 mb-8 text-center md:text-left">
             <h1 class="text-4xl md:text-5xl font-bold text-gray-900 tracking-tight mb-4">Angelo Rayfed Petraroia Cano</h1>
             
-            <div class="flex flex-wrap justify-center md:justify-start gap-4 md:gap-6 text-sm md:text-base text-secondary font-medium">
+            <div class="flex flex-wrap justify-center md:justify-start gap-4 md:gap-6 text-sm md:text-base text-secondary font-medium mb-8">
                 <div class="flex items-center gap-1.5 hover:text-primary transition-colors">
                     <i data-lucide="map-pin" class="w-4 h-4"></i>
                     London, England, UK
@@ -101,7 +130,7 @@
                         <i data-lucide="user" class="w-6 h-6"></i> Summary
                     </h2>
                     <p class="text-gray-700 leading-relaxed text-justify">
-                        Data-driven risk and policy analyst with extensive experience supporting large-scale platforms and teams through data-informed decision-making, cross-functional collaboration, and stakeholder alignment. Passionate about data analytics, compliance-driven work, and optimising product effectiveness to protect online communities.
+                        Data-driven risk and policy analyst with extensive experience supporting large-scale platforms and teams through data-informed decision-making, cross-functional collaboration, and stakeholder alignment. Passionate about leveraging data analytics, ensuring strict legal compliance, and optimising product effectiveness to protect online communities at scale.
                     </p>
                 </section>
 
@@ -134,7 +163,6 @@
                             <span class="text-sm font-medium text-gray-500">London, UK</span>
                         </div>
                         
-                        <!-- TikTok Role 1 -->
                         <div class="mb-5 avoid-break pl-4 border-l-2 border-gray-200">
                             <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline mb-2">
                                 <h4 class="text-lg font-semibold text-gray-800">Trust & Safety Team Lead</h4>
@@ -148,7 +176,6 @@
                             </ul>
                         </div>
 
-                        <!-- TikTok Role 2 -->
                         <div class="mb-5 avoid-break pl-4 border-l-2 border-gray-200">
                             <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline mb-2">
                                 <h4 class="text-lg font-semibold text-gray-800">Trust & Safety Quality Analyst</h4>
@@ -161,7 +188,6 @@
                             </ul>
                         </div>
 
-                        <!-- TikTok Role 3 -->
                         <div class="avoid-break pl-4 border-l-2 border-gray-200">
                             <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline mb-2">
                                 <h4 class="text-lg font-semibold text-gray-800">Community Content Management Specialist</h4>
@@ -196,7 +222,6 @@
                             <span class="text-sm font-medium text-gray-500">Kingston upon Thames, UK</span>
                         </div>
 
-                        <!-- Sitel Role 1 -->
                         <div class="mb-5 avoid-break pl-4 border-l-2 border-gray-200">
                             <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline mb-2">
                                 <h4 class="text-lg font-semibold text-gray-800">IT Support - FileMaker Inc. <span class="text-sm font-normal text-secondary">(Apple Subsidiary)</span></h4>
@@ -208,7 +233,6 @@
                             </ul>
                         </div>
 
-                        <!-- Sitel Role 2 -->
                         <div class="avoid-break pl-4 border-l-2 border-gray-200">
                             <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline mb-2">
                                 <h4 class="text-lg font-semibold text-gray-800">Quality Assurance & Multilingual Service Advisor</h4>
@@ -245,7 +269,7 @@
                     <h2 class="text-2xl font-bold text-primary flex items-center gap-2 mb-4">
                         <i data-lucide="graduation-cap" class="w-6 h-6"></i> Education
                     </h2>
-                    <div class="bg-gray-50 rounded-lg p-4 border border-gray-100">
+                    <div class="bg-gray-50 rounded-lg p-4 border border-gray-100 hover:shadow-md transition-shadow">
                         <h3 class="font-bold text-gray-900 text-lg">Data Science & Computing</h3>
                         <p class="text-primary font-medium mt-1">Birkbeck, University of London</p>
                         <p class="text-secondary text-sm mt-1 flex items-center gap-1">
@@ -260,65 +284,63 @@
                 <!-- Skills Section -->
                 <section>
                     <h2 class="text-2xl font-bold text-primary flex items-center gap-2 mb-4">
-                        <i data-lucide="cpu" class="w-6 h-6"></i> Skills
+                        <i data-lucide="cpu" class="w-6 h-6"></i> Core Competencies
                     </h2>
                     
+                    <!-- Policy & Strategy -->
                     <div class="mb-6 avoid-break">
-                        <h3 class="font-semibold text-gray-800 mb-3 uppercase tracking-wider text-sm">Trust & Safety & Policy</h3>
+                        <h3 class="font-semibold text-gray-800 mb-3 uppercase tracking-wider text-xs border-b pb-1">Policy & Trust</h3>
                         <div class="flex flex-wrap gap-2">
-                            <span class="bg-blue-50 text-blue-700 px-3 py-1 rounded-full text-sm border border-blue-100">Content Moderation</span>
-                            <span class="bg-blue-50 text-blue-700 px-3 py-1 rounded-full text-sm border border-blue-100">Policy Enforcement</span>
-                            <span class="bg-blue-50 text-blue-700 px-3 py-1 rounded-full text-sm border border-blue-100">Legal Takedowns</span>
-                            <span class="bg-blue-50 text-blue-700 px-3 py-1 rounded-full text-sm border border-blue-100">GDPR & Data Protection</span>
-                            <span class="bg-blue-50 text-blue-700 px-3 py-1 rounded-full text-sm border border-blue-100">RTBF</span>
-                            <span class="bg-blue-50 text-blue-700 px-3 py-1 rounded-full text-sm border border-blue-100">IP</span>
-                            <span class="bg-blue-50 text-blue-700 px-3 py-1 rounded-full text-sm border border-blue-100">Escalation Handling</span>
-                            <span class="bg-blue-50 text-blue-700 px-3 py-1 rounded-full text-sm border border-blue-100">QA</span>
-                            <span class="bg-blue-50 text-blue-700 px-3 py-1 rounded-full text-sm border border-blue-100">Root Cause Analysis (RCA)</span>
-                            <span class="bg-blue-50 text-blue-700 px-3 py-1 rounded-full text-sm border border-blue-100">Trend Discovery</span>
-                            <span class="bg-blue-50 text-blue-700 px-3 py-1 rounded-full text-sm border border-blue-100">Risk Mitigation</span>
+                            <span class="bg-blue-50 text-blue-700 px-3 py-1 rounded-full text-xs font-medium border border-blue-100">Legal Takedowns</span>
+                            <span class="bg-blue-50 text-blue-700 px-3 py-1 rounded-full text-xs font-medium border border-blue-100">Escalation Handling</span>
+                            <span class="bg-blue-50 text-blue-700 px-3 py-1 rounded-full text-xs font-medium border border-blue-100">GDPR & UK Data Protection</span>
+                            <span class="bg-blue-50 text-blue-700 px-3 py-1 rounded-full text-xs font-medium border border-blue-100">Right to Be Forgotten (RTBF)</span>
+                            <span class="bg-blue-50 text-blue-700 px-3 py-1 rounded-full text-xs font-medium border border-blue-100">Intellectual Property (IP)</span>
+                            <span class="bg-blue-50 text-blue-700 px-3 py-1 rounded-full text-xs font-medium border border-blue-100">Policy Enforcement</span>
+                            <span class="bg-blue-50 text-blue-700 px-3 py-1 rounded-full text-xs font-medium border border-blue-100">Risk Mitigation</span>
                         </div>
                     </div>
 
+                    <!-- Data Science -->
                     <div class="mb-6 avoid-break">
-                        <h3 class="font-semibold text-gray-800 mb-3 uppercase tracking-wider text-sm">Technical</h3>
+                        <h3 class="font-semibold text-gray-800 mb-3 uppercase tracking-wider text-xs border-b pb-1">Data Science & Analytics</h3>
                         <div class="flex flex-wrap gap-2">
-                            <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm border border-gray-200">Python</span>
-                            <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm border border-gray-200">Data Analysis</span>
-                            <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm border border-gray-200">Visualisation Dashboards</span>
-                            <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm border border-gray-200">CMS & CRM</span>
-                            <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm border border-gray-200">Dev Tools</span>
-                            <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm border border-gray-200">HTML/CSS</span>
-                            <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm border border-gray-200">AWS EC2</span>
-                            <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm border border-gray-200">TeamViewer</span>
+                            <span class="bg-emerald-50 text-emerald-700 px-3 py-1 rounded-full text-xs font-medium border border-emerald-100">Python</span>
+                            <span class="bg-emerald-50 text-emerald-700 px-3 py-1 rounded-full text-xs font-medium border border-emerald-100">SQL</span>
+                            <span class="bg-emerald-50 text-emerald-700 px-3 py-1 rounded-full text-xs font-medium border border-emerald-100">Data Visualisation Dashboards</span>
+                            <span class="bg-emerald-50 text-emerald-700 px-3 py-1 rounded-full text-xs font-medium border border-emerald-100">AI Model Workflows</span>
+                            <span class="bg-emerald-50 text-emerald-700 px-3 py-1 rounded-full text-xs font-medium border border-emerald-100">Root Cause Analysis (RCA)</span>
+                            <span class="bg-emerald-50 text-emerald-700 px-3 py-1 rounded-full text-xs font-medium border border-emerald-100">Trend Discovery</span>
                         </div>
                     </div>
 
+                    <!-- Tools -->
                     <div class="mb-6 avoid-break">
-                        <h3 class="font-semibold text-gray-800 mb-3 uppercase tracking-wider text-sm">Soft Skills</h3>
+                        <h3 class="font-semibold text-gray-800 mb-3 uppercase tracking-wider text-xs border-b pb-1">Tools & Technology</h3>
                         <div class="flex flex-wrap gap-2">
-                            <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm border border-gray-200">Cross-functional Collaboration</span>
-                            <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm border border-gray-200">Stakeholder Alignment</span>
-                            <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm border border-gray-200">Problem Solving</span>
-                            <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm border border-gray-200">Diplomatic Communication</span>
-                            <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm border border-gray-200">Organisational Leadership</span>
+                            <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-xs font-medium border border-gray-200">CMS & CRM Systems</span>
+                            <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-xs font-medium border border-gray-200">Dev Tools</span>
+                            <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-xs font-medium border border-gray-200">HTML/CSS</span>
+                            <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-xs font-medium border border-gray-200">AWS EC2</span>
+                            <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-xs font-medium border border-gray-200">QA Tooling</span>
                         </div>
                     </div>
 
+                    <!-- Languages -->
                     <div class="avoid-break">
-                        <h3 class="font-semibold text-gray-800 mb-3 uppercase tracking-wider text-sm">Languages</h3>
+                        <h3 class="font-semibold text-gray-800 mb-3 uppercase tracking-wider text-xs border-b pb-1">Languages</h3>
                         <ul class="space-y-2 text-sm text-gray-700">
-                            <li class="flex justify-between items-center bg-gray-50 px-3 py-2 rounded-md">
+                            <li class="flex justify-between items-center bg-gray-50 px-3 py-2 rounded-md border border-gray-100">
                                 <span class="font-medium">English</span>
-                                <span class="text-secondary text-xs font-semibold">Native/Bilingual</span>
+                                <span class="text-secondary text-xs font-bold uppercase">Native / Bilingual</span>
                             </li>
-                            <li class="flex justify-between items-center bg-gray-50 px-3 py-2 rounded-md">
+                            <li class="flex justify-between items-center bg-gray-50 px-3 py-2 rounded-md border border-gray-100">
                                 <span class="font-medium">Spanish</span>
-                                <span class="text-secondary text-xs font-semibold">Native/Bilingual</span>
+                                <span class="text-secondary text-xs font-bold uppercase">Native / Bilingual</span>
                             </li>
-                            <li class="flex justify-between items-center bg-gray-50 px-3 py-2 rounded-md">
+                            <li class="flex justify-between items-center bg-gray-50 px-3 py-2 rounded-md border border-gray-100">
                                 <span class="font-medium">Italian</span>
-                                <span class="text-secondary text-xs font-semibold">Native/Bilingual</span>
+                                <span class="text-secondary text-xs font-bold uppercase">Native / Bilingual</span>
                             </li>
                         </ul>
                     </div>
@@ -327,9 +349,102 @@
         </div>
     </main>
 
+    <!-- ============================== -->
+    <!--      PAGE 2: WHY HIRE ME?      -->
+    <!-- ============================== -->
+    <main id="coverLetterView" class="hidden page-container max-w-5xl mx-auto bg-white p-8 md:p-14 lg:p-16 shadow-xl rounded-sm border border-gray-200 fade-enter">
+        
+        <header class="border-b-2 border-primary pb-6 mb-8">
+            <h1 class="text-4xl font-bold text-gray-900 tracking-tight mb-2">Why Hire Me?</h1>
+            <p class="text-secondary text-lg">A closer look at my approach to Trust & Safety, Data Science, and Policy Enforcement.</p>
+        </header>
+
+        <div class="space-y-10">
+            
+            <!-- Cover Letter / Intro -->
+            <section>
+                <h2 class="text-2xl font-bold text-primary flex items-center gap-2 mb-4">
+                    <i data-lucide="pen-tool" class="w-6 h-6"></i> Personal Statement
+                </h2>
+                <div class="prose max-w-none text-gray-700 leading-relaxed text-justify space-y-4" id="coverLetterContent">
+                    <p>
+                        <em>[Placeholder: This is where we can write a strong 2-3 paragraph cover letter introducing your unique blend of Data Science skills and Trust & Safety expertise.]</em>
+                    </p>
+                    <p>
+                        <em>[Placeholder: We can highlight how your multilingual abilities and your experience at major tech platforms like Google and TikTok make you an immediate asset to any global team.]</em>
+                    </p>
+                </div>
+            </section>
+
+            <!-- Recruiter FAQ Section -->
+            <section>
+                <h2 class="text-2xl font-bold text-primary flex items-center gap-2 mb-6">
+                    <i data-lucide="help-circle" class="w-6 h-6"></i> Frequently Asked Questions
+                </h2>
+                
+                <div class="space-y-6" id="faqContent">
+                    <!-- FAQ 1 -->
+                    <div class="bg-gray-50 p-6 rounded-lg border border-gray-100">
+                        <h3 class="text-lg font-bold text-gray-900 mb-2">How does your Data Science degree improve your Trust & Safety work?</h3>
+                        <p class="text-gray-700">
+                            <em>[Placeholder: We will answer this by explaining how you use SQL, Python, and data visualisation to find trends faster than standard manual moderation, just like you did at TikTok.]</em>
+                        </p>
+                    </div>
+
+                    <!-- FAQ 2 -->
+                    <div class="bg-gray-50 p-6 rounded-lg border border-gray-100">
+                        <h3 class="text-lg font-bold text-gray-900 mb-2">What is your approach to handling complex legal escalations?</h3>
+                        <p class="text-gray-700">
+                            <em>[Placeholder: We will discuss your current experience at Google Legal, focusing on accuracy, contextual judgement, and cross-functional alignment.]</em>
+                        </p>
+                    </div>
+
+                    <!-- FAQ 3 -->
+                    <div class="bg-gray-50 p-6 rounded-lg border border-gray-100">
+                        <h3 class="text-lg font-bold text-gray-900 mb-2">Can you lead a team in high-pressure situations?</h3>
+                        <p class="text-gray-700">
+                            <em>[Placeholder: We will highlight your leadership of the 25-moderator Trend Discovery Project at TikTok and your success in recalling 5 major harmful trends.]</em>
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
     <script>
         // Initialize Lucide icons
         lucide.createIcons();
+
+        // Toggle Functionality
+        function toggleView() {
+            const cvView = document.getElementById('cvView');
+            const letterView = document.getElementById('coverLetterView');
+            const btnText = document.getElementById('btnText');
+            const btnIcon = document.getElementById('btnIcon');
+
+            if (cvView.classList.contains('hidden')) {
+                // Currently on "Why Hire Me", switch back to "CV"
+                cvView.classList.remove('hidden');
+                letterView.classList.add('hidden');
+                
+                btnText.innerText = 'Why Hire Me?';
+                btnIcon.setAttribute('data-lucide', 'message-square');
+            } else {
+                // Currently on "CV", switch to "Why Hire Me"
+                cvView.classList.add('hidden');
+                letterView.classList.remove('hidden');
+                
+                btnText.innerText = 'Back to CV';
+                btnIcon.setAttribute('data-lucide', 'file-text');
+            }
+            
+            // Re-render icons after changing the attribute
+            lucide.createIcons();
+            
+            // Scroll to top smoothly
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
     </script>
 </body>
 </html>
